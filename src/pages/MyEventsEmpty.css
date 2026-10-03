@@ -1,0 +1,41 @@
+.empty-event-state {
+  min-height: 300px;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding: 30px;
+  text-align: center;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+}
+
+.empty-event-state > svg {
+  width: 25px;
+  height: 25px;
+  padding: 18px;
+  margin-bottom: 18px;
+  color: #0066ff;
+  background: #eaf2ff;
+  border-radius: 50%;
+}
+
+.empty-event-state h2 {
+  color: #111827;
+}
+
+.empty-event-state p {
+  max-width: 400px;
+  margin: 8px 0 20px;
+  color: #6b7280;
+  font-size: 0.85rem;
+}
+
+.empty-event-state a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #0066ff;
+  font-size: 0.85rem;
+  font-weight: 800;
+}

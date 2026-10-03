@@ -1,0 +1,136 @@
+/* ─── Event Card ─── */
+.event-card {
+  overflow: hidden;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  transition:
+    transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 0.3s ease;
+  animation: cardAppear 0.45s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+.event-card:hover {
+  transform: translateY(-7px);
+  border-color: #c9dcff;
+  box-shadow: 0 24px 50px rgba(17, 24, 39, 0.1), 0 4px 16px rgba(0, 102, 255, 0.06);
+}
+
+/* Image */
+.event-image-wrapper {
+  position: relative;
+  height: 215px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.event-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.event-card:hover .event-image-wrapper img {
+  transform: scale(1.07);
+}
+
+.event-category {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.95);
+  color: #0066ff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+/* Body */
+.event-card-body {
+  padding: 20px 22px 22px;
+}
+
+.event-mode {
+  color: #0066ff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.event-card h3 {
+  margin: 8px 0 5px;
+  color: #111827;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.event-organizer {
+  margin-bottom: 16px;
+  color: #9ca3af;
+  font-size: 0.8rem;
+}
+
+/* Meta */
+.event-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 14px 0;
+  border-top: 1px solid #f0f2f5;
+  border-bottom: 1px solid #f0f2f5;
+}
+
+.event-meta span {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #6b7280;
+  font-size: 0.77rem;
+}
+
+.event-meta svg {
+  width: 12px;
+  color: #0066ff;
+  flex-shrink: 0;
+}
+
+/* Footer link */
+.event-details-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 16px;
+  color: #0066ff;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: gap 0.2s ease;
+}
+
+.event-details-link svg {
+  transition: transform 0.25s ease;
+  font-size: 0.75rem;
+}
+
+.event-details-link:hover svg {
+  transform: translateX(5px);
+}
+
+@keyframes cardAppear {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

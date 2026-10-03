@@ -1,0 +1,113 @@
+/* ─── My Events Page ─── */
+.my-events-page {
+  width: min(1100px, 88%);
+  min-height: calc(100vh - 200px);
+  margin: auto;
+  padding: 60px 0 90px;
+}
+
+/* ─── Header ─── */
+.my-events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 36px;
+  gap: 16px;
+}
+
+.my-events-header h1 {
+  margin: 10px 0 8px;
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1;
+}
+
+.my-events-header > div > p {
+  color: #9ca3af;
+  font-size: 0.88rem;
+}
+
+.my-events-header > svg {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  padding: 18px;
+  color: #0066ff;
+  background: linear-gradient(135deg, #eaf2ff, #dbeafe);
+  border-radius: 16px;
+  box-sizing: content-box;
+  box-shadow: 0 4px 14px rgba(0, 102, 255, 0.12);
+}
+
+/* ─── Tabs ─── */
+.my-events-tabs {
+  display: flex;
+  gap: 4px;
+  padding: 5px;
+  width: fit-content;
+  margin-bottom: 28px;
+  background: #f1f5f9;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+}
+
+.my-events-tabs a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  border-radius: 9px;
+  color: #9ca3af;
+  font-size: 0.82rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.my-events-tabs a svg {
+  font-size: 0.75rem;
+}
+
+.my-events-tabs a:hover {
+  color: #0066ff;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.my-events-tabs a.active {
+  color: #111827;
+  background: white;
+  font-weight: 700;
+  box-shadow: 0 2px 10px rgba(17, 24, 39, 0.08), 0 1px 3px rgba(17, 24, 39, 0.05);
+}
+
+/* ─── Outlet Area ─── */
+.nested-content {
+  animation: nestedFade 0.35s cubic-bezier(0.4, 0, 0.2, 1) both;
+}
+
+@keyframes nestedFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 600px) {
+  .my-events-page {
+    width: 92%;
+  }
+
+  .my-events-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .my-events-header > svg {
+    display: none;
+  }
+}

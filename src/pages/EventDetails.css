@@ -1,0 +1,284 @@
+/* ─── Event Details Page ─── */
+.details-page {
+  width: min(1150px, 88%);
+  margin: auto;
+  padding: 50px 0 90px;
+}
+
+/* ─── Back Button ─── */
+.details-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  padding: 9px 16px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 9px;
+  color: #374151;
+  background: white;
+  font-size: 0.84rem;
+  font-weight: 600;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 4px rgba(17, 24, 39, 0.05);
+}
+
+.details-back svg {
+  color: #0066ff;
+  font-size: 0.78rem;
+  transition: transform 0.2s ease;
+}
+
+.details-back:hover {
+  border-color: #c9dcff;
+  background: #eaf2ff;
+  color: #0066ff;
+}
+
+.details-back:hover svg {
+  transform: translateX(-3px);
+}
+
+/* ─── Card Layout ─── */
+.details-card {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  overflow: hidden;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(17, 24, 39, 0.08);
+}
+
+/* ─── Image Panel ─── */
+.details-image {
+  position: relative;
+  min-height: 580px;
+  overflow: hidden;
+  background: #f3f4f6;
+}
+
+.details-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.details-image span {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  padding: 6px 12px;
+  color: #0066ff;
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 7px;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.4px;
+  backdrop-filter: blur(4px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+/* ─── Content Panel ─── */
+.details-content {
+  padding: 52px 50px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.details-mode {
+  display: inline-block;
+  color: #0066ff;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 10px;
+}
+
+.details-content h1 {
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.05;
+}
+
+.details-organizer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 32px;
+  color: #6b7280;
+  font-size: 0.84rem;
+}
+
+.details-organizer svg {
+  color: #0066ff;
+  font-size: 0.8rem;
+}
+
+/* ─── Info Grid ─── */
+.details-info-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 22px 0;
+  border-top: 1.5px solid #f0f2f5;
+  border-bottom: 1.5px solid #f0f2f5;
+}
+
+.details-info-grid div {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 14px;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #eef0f3;
+  transition: border-color 0.2s ease;
+}
+
+.details-info-grid div:hover {
+  border-color: #c9dcff;
+}
+
+.details-info-grid > div > svg {
+  margin-top: 2px;
+  color: #0066ff;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+
+.details-info-grid span {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.details-info-grid small {
+  color: #9ca3af;
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ─── Description ─── */
+.details-description {
+  padding: 26px 0;
+  flex: 1;
+}
+
+.details-description h3 {
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: #374151;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.details-description p {
+  color: #6b7280;
+  line-height: 1.8;
+  font-size: 0.88rem;
+}
+
+/* ─── Register Button ─── */
+.register-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 11px;
+  color: white;
+  background: linear-gradient(135deg, #0066ff, #3b82f6);
+  font-size: 0.92rem;
+  font-weight: 800;
+  font-family: inherit;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(0, 102, 255, 0.28);
+  margin-top: auto;
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #0050cc, #2563eb);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(0, 102, 255, 0.35);
+}
+
+/* ─── Not Found State ─── */
+.details-not-found {
+  min-height: 65vh;
+  display: grid;
+  place-content: center;
+  text-align: center;
+  gap: 4px;
+}
+
+.details-not-found h2 {
+  font-size: 1.4rem;
+  margin-bottom: 8px;
+}
+
+.details-not-found p {
+  margin: 0 0 20px;
+  color: #9ca3af;
+  font-size: 0.9rem;
+}
+
+.details-not-found a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  color: #0066ff;
+  background: #eaf2ff;
+  border-radius: 9px;
+  font-weight: 700;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.details-not-found a:hover {
+  background: #d6e8ff;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 850px) {
+  .details-card {
+    grid-template-columns: 1fr;
+  }
+
+  .details-image {
+    min-height: 380px;
+  }
+}
+
+@media (max-width: 550px) {
+  .details-page {
+    width: 92%;
+  }
+
+  .details-content {
+    padding: 28px 22px 30px;
+  }
+
+  .details-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .details-image {
+    min-height: 280px;
+  }
+}
